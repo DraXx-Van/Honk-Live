@@ -177,7 +177,8 @@ export default function BusTracker() {
     let mounted = true
     try {
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-      const ws = new WebSocket(`${protocol}//localhost:3001/ws/bus-updates?routeId=${routeId}`)
+      const wsHost = BACKEND_URL ? new URL(BACKEND_URL).host : window.location.host
+      const ws = new WebSocket(`${protocol}//${wsHost}/ws/bus-updates?routeId=${routeId}`)
       wsRef.current = ws
       ws.onmessage = (event) => {
         if (!mounted) return

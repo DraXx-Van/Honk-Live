@@ -183,7 +183,8 @@ export default function RouteDetails() {
     const connectWs = () => {
       try {
         const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-        const wsUrl = `${protocol}//localhost:3001/ws/bus-updates?routeId=${routeId}`
+        const wsHost = BACKEND_URL ? new URL(BACKEND_URL).host : window.location.host
+        const wsUrl = `${protocol}//${wsHost}/ws/bus-updates?routeId=${routeId}`
         const ws = new WebSocket(wsUrl)
         wsRef.current = ws
 
