@@ -123,7 +123,7 @@ _[Link to demo video]_
 
 ## 👥 Team
 
-- _[Your Name]_ — _[Your Role]_
+- **Dakshat Jain** — Full-Stack Developer
 
 ---
 
