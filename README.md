@@ -6,8 +6,8 @@
 
 ## 🚀 Live Demo
 
-- **Frontend**: _[Vercel URL]_
-- **Backend**: _[Render URL]_
+- **Frontend**: https://honk-live.vercel.app
+- **Backend**: https://honk-live-backend.onrender.com
 
 ## ✨ Features
 
